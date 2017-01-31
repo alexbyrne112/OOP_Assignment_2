@@ -5,6 +5,7 @@ void setup()
   smooth(4);
   startscreen = loadImage("startscreen.jpg");
   zombie = loadImage("zombie.jpg");
+  flooring = loadImage("floor.jpg");
   font = loadFont("Morethanhuman-130.vlw");
   
   fill(200,0,0);
@@ -21,13 +22,15 @@ void setup()
 
 PImage zombie;
 PImage startscreen;
+PImage flooring;
+
 PFont font;
 
 int backdrop = 0;
 
 Button b1 = new Button();
-
 Menu menu = new Menu();
+Location1 l = new Location1();
 
 void draw()
 {
@@ -35,8 +38,8 @@ void draw()
   {
     menu.display();
   }
-  if(backdrop == 1)
+  else if(backdrop == 1)
   {
-    background(0);
+    l.display();
   }
 }
