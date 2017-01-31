@@ -23,7 +23,7 @@ PImage zombie;
 PImage startscreen;
 PFont font;
 
-int background = 0;
+int backdrop = 0;
 
 Button b1 = new Button();
 
@@ -31,5 +31,12 @@ Menu menu = new Menu();
 
 void draw()
 {
-  menu.display();
+  if(backdrop == 0)
+  {
+    menu.display();
+  }
+  if(backdrop == 1)
+  {
+    background(0);
+  }
 }
