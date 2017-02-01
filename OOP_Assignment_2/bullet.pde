@@ -22,7 +22,8 @@ class Bullet extends GameObject // Gets everything from GameObject
     translate(pos.x, pos.y,+5);
     rotate(theta);
     stroke(255);
-    line(0, - size / 2, 0, size / 2);
+    fill(0);
+    ellipse(0,0,20, 20);
     popMatrix();
   }
   
@@ -30,7 +31,9 @@ class Bullet extends GameObject // Gets everything from GameObject
   {
     forward.x = sin(theta);
     forward.y = - cos(theta);
-    
+    //PVector bp = PVector.add(pos, PVector.mult(forward, 40));
+      //text(theta, width/2, height/2);
+      text(pos.x + "  "+pos.y,width/2, height/2);
     pos.add(PVector.mult(PVector.mult(forward, speed), timeDelta));
     if (pos.x > width)
     {
@@ -48,6 +51,7 @@ class Bullet extends GameObject // Gets everything from GameObject
     {
       pos.y = height;
     }
+    
     alive += timeDelta;
     if (alive > timeToLive)
     {

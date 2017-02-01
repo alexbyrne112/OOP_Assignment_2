@@ -78,8 +78,8 @@ class Player extends GameObject
     
     if (checkKey(shoot) && elapsed > toPass && ammo > 0)
     {
-      //PVector bp = PVector.add(pos, PVector.mult(forward, 40));
-      Bullet b = new Bullet(pos.x,pos.y, theta, 20, 5);
+      
+      Bullet b = new Bullet(pos.x, pos.y - 100, theta, 20, 5);
       gameObjects.add(b);
       elapsed = 0;
       ammo --;
@@ -96,7 +96,7 @@ class Player extends GameObject
         if (dist(go.pos.x, go.pos.y, this.pos.x, this.pos.y) < radius)
         {
           health --;
-          gameObjects.remove(b);
+           gameObjects.remove(b);
         }
       }
       /*if (go instanceof Powerup)

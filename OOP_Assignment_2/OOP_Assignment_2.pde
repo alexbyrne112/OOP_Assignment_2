@@ -73,8 +73,8 @@ void draw()
   for(int i = 0; i < gameObjects.size(); i ++)
   {
     GameObject go = gameObjects.get(i);
-    
-    go.update();
     go.render();
+    go.update();
+    
   }
 }
