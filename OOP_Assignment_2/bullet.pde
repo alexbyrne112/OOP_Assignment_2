@@ -19,7 +19,7 @@ class Bullet extends GameObject
   void render()
   {
     pushMatrix();
-    translate(pos.x, pos.y,+5);
+    translate(pos.x, pos.y);
     rotate(theta);
     stroke(255);
     fill(0);
