@@ -21,13 +21,11 @@ class Menu
         fill(200,0,0);
         text("START", 235, height - 225);
         image(zombie,width / 2 - 200, height - 400, 400, 400);
+        //scare.play();
         if(mousePressed == true)
          {
-           //image(zombie,width / 2 - 200, height - 400, 400, 400);
-
-           
-             backdrop ++;
-           
+           backdrop ++;
+           scare.play();
          }
       }
       else

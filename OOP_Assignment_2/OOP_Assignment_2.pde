@@ -14,6 +14,9 @@ void setup()
   textFont(font);
   text("ZOMBIE LAND", 100, 250);
   
+  minim = new Minim(this);
+  scare = minim.loadFile("scare.mp3");
+  
   b1.x = 200;
   b1.y = height - height/3;
   b1.bwidth = 400;
@@ -37,7 +40,9 @@ Button b1 = new Button();
 Menu menu = new Menu();
 Location1 l = new Location1();
 
-//int imageLife = 120;
+import ddf.minim.*;
+Minim minim;
+AudioPlayer scare;
 
 boolean checkKey(int k)
 {
