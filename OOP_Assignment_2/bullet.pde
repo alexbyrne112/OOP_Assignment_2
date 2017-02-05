@@ -1,4 +1,4 @@
-class Bullet extends GameObject // Gets everything from GameObject
+class Bullet extends GameObject
 {
   float theta;
   float size;
@@ -27,7 +27,7 @@ class Bullet extends GameObject // Gets everything from GameObject
     popMatrix();
   }
   
-  void update() // Overrides the method in the base class
+  void update() 
   {
     forward.x = sin(theta);
     forward.y = - cos(theta);

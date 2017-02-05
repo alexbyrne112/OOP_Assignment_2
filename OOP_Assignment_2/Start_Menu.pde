@@ -1,5 +1,6 @@
 class Menu
 {
+   
   
   void display()
   {
@@ -20,6 +21,14 @@ class Menu
         fill(200,0,0);
         text("START", 235, height - 225);
         image(zombie,width / 2 - 200, height - 400, 400, 400);
+        if(mousePressed == true)
+         {
+           //image(zombie,width / 2 - 200, height - 400, 400, 400);
+
+           
+             backdrop ++;
+           
+         }
       }
       else
       {
@@ -32,11 +41,6 @@ class Menu
         fill(0);
         stroke(0);
         rect(width / 2 - 200, height - 400, 400, 400);
-      }
-      
-      if(mousePressed == true)
-      {
-       backdrop ++;
       }
     }
   }

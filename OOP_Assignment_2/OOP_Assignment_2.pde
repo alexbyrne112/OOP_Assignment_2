@@ -25,9 +25,6 @@ ArrayList<GameObject> gameObjects = new ArrayList<GameObject>();
 boolean[] keys = new boolean[1000];
 float timeDelta = 1.0f / 60.0f;
 
-//gameObjects.add(aiShip);
-//
-
 PImage zombie;
 PImage startscreen;
 PImage flooring;
@@ -39,6 +36,8 @@ int backdrop = 0;
 Button b1 = new Button();
 Menu menu = new Menu();
 Location1 l = new Location1();
+
+//int imageLife = 120;
 
 boolean checkKey(int k)
 {
@@ -66,15 +65,16 @@ void draw()
     menu.display();
   }
   else if(backdrop == 1)
-  {
+ {
     l.display();
+    for(int i = 0; i < gameObjects.size(); i ++)
+    {
+      GameObject go = gameObjects.get(i);
+      go.render();
+      go.update();
+      
+    }
   }
   
-  for(int i = 0; i < gameObjects.size(); i ++)
-  {
-    GameObject go = gameObjects.get(i);
-    go.render();
-    go.update();
-    
-  }
+
 }

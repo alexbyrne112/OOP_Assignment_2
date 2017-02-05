@@ -48,9 +48,9 @@ class Player extends GameObject
    translate(pos.x, pos.y);
    rotate(theta);
    shape(shape, 0, 0);
+  //ellipse(0,0,50,50);
    popMatrix();
   }
-  
   
   void update()
   {
@@ -99,16 +99,6 @@ class Player extends GameObject
            gameObjects.remove(b);
         }
       }
-      /*if (go instanceof Powerup)
-      {
-        Powerup p = (Powerup) go; // p is of type oowerup so the only method we can call on p is applyTo
-        if (dist(go.pos.x, go.pos.y, this.pos.x, this.pos.y) < radius + 15)
-        {
-          p.applyTo(this);
-          gameObjects.remove(go);
-        }
-      }*/
     }
   }
-  
 }
