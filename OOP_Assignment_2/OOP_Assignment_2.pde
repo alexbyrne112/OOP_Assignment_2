@@ -16,6 +16,8 @@ void setup()
   
   minim = new Minim(this);
   scare = minim.loadFile("scare.mp3");
+  ambiance = minim.loadFile("ambiance.mp3");
+  girl = minim.loadFile("girl.mp3");
   
   b1.x = 200;
   b1.y = height - height/3;
@@ -40,9 +42,14 @@ Button b1 = new Button();
 Menu menu = new Menu();
 Location1 l = new Location1();
 
+
+//http://soundbible.com/
 import ddf.minim.*;
 Minim minim;
 AudioPlayer scare;
+AudioPlayer ambiance;
+AudioPlayer girl;
+
 
 boolean checkKey(int k)
 {
