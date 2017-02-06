@@ -16,6 +16,12 @@ class Location
     y +=(noise(yStartWind)*0.5)-0.25; 
     xwind = x;
     ywind = y;
+    for (int y=0; y<=height; y+=7) 
+    {
+    ywind +=.2;
+    xwind= x;
+    
+    }
   }
   
   
