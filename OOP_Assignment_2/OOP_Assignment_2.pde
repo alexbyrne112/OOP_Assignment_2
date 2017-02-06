@@ -7,9 +7,9 @@ void setup()
   flooring = loadImage("floor.jpg");
   font = loadFont("Morethanhuman-130.vlw");
   Player player0 = new Player((float)width/2, (float)height/2,(float) 0, (float)50, 'w', 's', 'a' ,'d', ' ');
-  Enemy enemy1 = new Enemy();
+  //Enemy enemy1 = new Enemy();
   gameObjects.add(player0);
-  gameObjects.add(enemy1);
+  //gameObjects.add(enemy1);
   fill(200,0,0);
   textSize(0);
   textFont(font);
@@ -89,5 +89,9 @@ void draw()
     }
   }
   
-
+  if (frameCount % 240 == 0)
+  {
+    Enemy enemy1 = new Enemy(random(0, width), random(0, height), random(1,4));
+    gameObjects.add(enemy1);
+  }
 }
