@@ -23,7 +23,7 @@ void setup()
   b1.y = height - height/3;
   b1.bwidth = 400;
   b1.bheight = 200;
-  
+
 }
 
 ArrayList<GameObject> gameObjects = new ArrayList<GameObject>();
@@ -40,7 +40,8 @@ int backdrop = 0;
 
 Button b1 = new Button();
 Menu menu = new Menu();
-Location1 l = new Location1();
+Location l = new Location();
+Grass grass = new Grass();
 
 
 //http://soundbible.com/
@@ -79,6 +80,7 @@ void draw()
   else if(backdrop == 1)
  {
     l.display();
+   // grass.display();
     for(int i = 0; i < gameObjects.size(); i ++)
     {
       GameObject go = gameObjects.get(i);
