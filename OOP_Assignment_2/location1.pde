@@ -10,6 +10,12 @@ class Location
   void display()
   {
     background(150,100,50);
+    xStartWind += 0.01;
+    yStartWind += 0.01;
+    x +=(noise(xStartWind)*0.5)-0.25; 
+    y +=(noise(yStartWind)*0.5)-0.25; 
+    xwind = x;
+    ywind = y;
   }
   
   
