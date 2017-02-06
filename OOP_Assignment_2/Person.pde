@@ -23,12 +23,12 @@ class Player extends GameObject
     this.down = down;
     this.shoot = shoot;
     this.health = 10;
-    this.ammo = 100;
-    create();
+    this.ammo = 10;
+   // create();
     speed = 2;
   }
   
-  void create()
+  /*void create()
   {
    shape = createShape();
    shape.beginShape();
@@ -40,15 +40,15 @@ class Player extends GameObject
    shape.vertex(radius, radius);
    shape.vertex(0, 0);
    shape.endShape(CLOSE);
-  }
+  }*/
   
   void render()
   {
    pushMatrix();
    translate(pos.x, pos.y);
    rotate(theta);
-   shape(shape, 0, 0);
-   //ellipse(0,0,50,50);
+   //shape(shape, 0, 0);
+   ellipse(0,0,50,50);
    popMatrix();
   }
   

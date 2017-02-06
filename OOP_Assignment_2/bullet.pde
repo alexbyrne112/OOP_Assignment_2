@@ -19,33 +19,20 @@ class Bullet extends GameObject // Gets everything from GameObject
     pushMatrix();
     translate(pos.x, pos.y);
     rotate(theta);
-    stroke(255);
+    stroke(0);
+    strokeWeight(1);
+    fill(255,255,0);
     rect(0, 0, 3, 8);
     popMatrix();
   }
   
-  void update() // Overrides the method in the base class
+  void update()
   {
     forward.x = sin(theta);
     forward.y = - cos(theta);
     
     pos.add(PVector.mult(PVector.mult(forward, speed), timeDelta));
-   /* if (pos.x > width)
-    {
-      pos.x = 0;
-    }
-    if (pos.x < 0)
-    {
-      pos.x = width;
-    }
-    if (pos.y > height)
-    {
-      pos.y = 0;
-    }
-    if (pos.y < 0)
-    {
-      pos.y = height;
-    }*/
+
     alive += timeDelta;
     if (alive > timeToLive)
     {
