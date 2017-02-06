@@ -20,7 +20,11 @@ class Location
     {
     ywind +=.2;
     xwind= x;
-    
+    for (int x=0; x<=width; x+=6) 
+      {
+        xwind+=0.1;
+        Grass(x, y, noise(xwind, ywind));
+      }
     }
   }
   
