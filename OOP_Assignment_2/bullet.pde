@@ -1,4 +1,4 @@
-class Bullet extends GameObject // Gets everything from GameObject
+ class Bullet extends GameObject // Gets everything from GameObject
 {
   float theta;
   float speed = 750;
@@ -21,8 +21,8 @@ class Bullet extends GameObject // Gets everything from GameObject
     rotate(theta);
     stroke(0);
     strokeWeight(1);
-    fill(255,255,0);
-    rect(0, 0, 3, 8);
+    fill(255,140,0);
+    rect(0, 0, 5, 15);
     popMatrix();
   }
   

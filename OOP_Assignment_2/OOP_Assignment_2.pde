@@ -41,7 +41,6 @@ int backdrop = 0;
 Button b1 = new Button();
 Menu menu = new Menu();
 Location l = new Location();
-Grass grass = new Grass();
 
 
 //http://soundbible.com/
@@ -80,7 +79,6 @@ void draw()
   else if(backdrop == 1)
  {
     l.display();
-   // grass.display();
     for(int i = 0; i < gameObjects.size(); i ++)
     {
       GameObject go = gameObjects.get(i);

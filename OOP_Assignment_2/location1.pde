@@ -9,7 +9,7 @@ class Location
   
   void display()
   {
-    background(150,100,50);
+    background(100, 50, 0);
     xStartWind += 0.01;
     yStartWind += 0.01;
     x +=(noise(xStartWind)*0.5)-0.25; 
@@ -34,7 +34,8 @@ class Location
     pushMatrix();
     translate(x, y);
     rotate(wind*radians(360));
-    stroke(0,255,0);
+    strokeWeight(1.5);
+    stroke(15,130,5);
     line(0, 0, 20, 20);
     popMatrix();
   }
