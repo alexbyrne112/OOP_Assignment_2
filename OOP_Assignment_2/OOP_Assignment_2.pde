@@ -1,6 +1,6 @@
 void setup()
 {
-  fullScreen();
+  fullScreen(P3D);
   //background(0);
   smooth(4);
   startscreen = loadImage("startscreen.jpg");

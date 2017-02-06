@@ -1,7 +1,7 @@
 class Bullet extends GameObject // Gets everything from GameObject
 {
   float theta;
-  float speed = 200;
+  float speed = 750;
   float timeToLive;
   float alive;
   
@@ -17,7 +17,7 @@ class Bullet extends GameObject // Gets everything from GameObject
   void render()
   {
     pushMatrix();
-    translate(pos.x, pos.y);
+    translate(pos.x, pos.y,1);
     rotate(theta);
     stroke(0);
     strokeWeight(1);

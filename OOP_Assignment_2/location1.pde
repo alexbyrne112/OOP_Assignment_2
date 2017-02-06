@@ -2,7 +2,7 @@ class Location1
 {
   void display()
   {
-    background(80, 200, 10);
+    background(150,100,50);
     //image(flooring,50,50,width - 100,height - 100);
     /*stroke(0);
     strokeWeight(2);

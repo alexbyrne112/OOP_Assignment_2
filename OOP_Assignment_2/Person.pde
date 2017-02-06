@@ -24,31 +24,20 @@ class Player extends GameObject
     this.shoot = shoot;
     this.health = 10;
     this.ammo = 10;
-   // create();
-    speed = 2;
+    speed = 4;
   }
-  
-  /*void create()
-  {
-   shape = createShape();
-   shape.beginShape();
-   shape.stroke(255);
-   shape.fill(240, 200, 250);
-   shape.strokeWeight(3);
-   shape.vertex(-radius, radius);
-   shape.vertex(0, - radius);
-   shape.vertex(radius, radius);
-   shape.vertex(0, 0);
-   shape.endShape(CLOSE);
-  }*/
   
   void render()
   {
    pushMatrix();
-   translate(pos.x, pos.y);
+   translate(pos.x, pos.y,2);
    rotate(theta);
-   //shape(shape, 0, 0);
+   stroke(0);
+   strokeWeight(1);
+   fill(255,250,190);
    ellipse(0,0,50,50);
+   fill(150);
+   rect(-5,-35,10,10);
    popMatrix();
   }
   
