@@ -74,6 +74,12 @@ class Player extends GameObject
       ammo --;
     }
     
+   if (frameCount % 120 == 0)
+  {
+    Enemy enemy1 = new Enemy(random(0, width), random(0, height), random(1,4), (float)50, pos.x, pos.y);
+    gameObjects.add(enemy1);
+  }
+    
     elapsed += timeDelta;
   }
 }

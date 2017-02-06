@@ -89,9 +89,5 @@ void draw()
     }
   }
   
-  if (frameCount % 240 == 0)
-  {
-    Enemy enemy1 = new Enemy(random(0, width), random(0, height), random(1,4), (float)50);
-    gameObjects.add(enemy1);
-  }
+ 
 }
