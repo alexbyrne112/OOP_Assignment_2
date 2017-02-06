@@ -13,10 +13,14 @@ class Location
   }
   
   
+ void Grass(float x, float y, float wind)
   {
     pushMatrix();
-    
+    translate(x, y);
+    rotate(wind*radians(360));
+    stroke(0,255,0);
+    line(0, 0, 20, 20);
     popMatrix();
   }
-  
+    
 }
