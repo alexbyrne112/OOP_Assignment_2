@@ -23,7 +23,7 @@ class Player extends GameObject
     this.down = down;
     this.shoot = shoot;
     this.health = 10;
-    this.ammo = 10;
+    this.ammo = 100;
     create();
     speed = 2;
   }
@@ -79,26 +79,12 @@ class Player extends GameObject
     if (checkKey(shoot) && elapsed > toPass && ammo > 0)
     {
       
-      Bullet b = new Bullet(pos.x, pos.y - 100, theta, 5);
+      Bullet b = new Bullet(pos.x, pos.y, theta, 5);
       gameObjects.add(b);
       elapsed = 0;
       ammo --;
     }
     
     elapsed += timeDelta;
-    
-    for(int i = 0 ; i < gameObjects.size() ; i ++)
-    {
-      GameObject go = gameObjects.get(i);
-      if (go instanceof Bullet)
-      {
-        Bullet b = (Bullet) go;
-        if (dist(go.pos.x, go.pos.y, this.pos.x, this.pos.y) < radius)
-        {
-          health --;
-           gameObjects.remove(b);
-        }
-      }
-    }
   }
 }

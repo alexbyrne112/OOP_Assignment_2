@@ -30,7 +30,7 @@ class Bullet extends GameObject // Gets everything from GameObject
     forward.y = - cos(theta);
     
     pos.add(PVector.mult(PVector.mult(forward, speed), timeDelta));
-    if (pos.x > width)
+   /* if (pos.x > width)
     {
       pos.x = 0;
     }
@@ -45,7 +45,7 @@ class Bullet extends GameObject // Gets everything from GameObject
     if (pos.y < 0)
     {
       pos.y = height;
-    }
+    }*/
     alive += timeDelta;
     if (alive > timeToLive)
     {
