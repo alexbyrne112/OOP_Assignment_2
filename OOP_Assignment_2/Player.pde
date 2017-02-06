@@ -30,7 +30,7 @@ class Player extends GameObject
   void render()
   {
    pushMatrix();
-   translate(pos.x, pos.y,2);
+   translate(pos.x, pos.y,3);
    rotate(theta);
    stroke(0);
    strokeWeight(1);
@@ -68,7 +68,7 @@ class Player extends GameObject
     if (checkKey(shoot) && elapsed > toPass && ammo > 0)
     {
       
-      Bullet b = new Bullet(pos.x, pos.y, theta, 5);
+      Bullet b = new Bullet(pos.x, pos.y, theta, 4);
       gameObjects.add(b);
       elapsed = 0;
       ammo --;

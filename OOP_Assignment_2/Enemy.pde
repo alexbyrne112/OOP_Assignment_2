@@ -16,7 +16,7 @@ class Enemy extends GameObject
   void render()
   {
     pushMatrix();
-    translate(pos.x, pos.y, 3);
+    translate(pos.x, pos.y, 4);
     rotate(theta);
     strokeWeight(3);
     stroke(255, 0, 0);

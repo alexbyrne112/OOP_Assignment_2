@@ -5,6 +5,9 @@ class Perks
    strokeWeight(3);
    stroke(0);
    fill(255, 0, 0);
-   rect(height - 200, 200, 200, 200);
+   pushMatrix();
+   translate(width - 200, 0, 2);
+   rect(0, 0, 200, 200);
+   popMatrix();
  }
 }

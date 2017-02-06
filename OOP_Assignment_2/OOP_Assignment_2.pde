@@ -81,7 +81,7 @@ void draw()
   else if(backdrop == 1)
  {
     l.display();
-    p.display();
+     p.display();
     for(int i = 0; i < gameObjects.size(); i ++)
     {
       GameObject go = gameObjects.get(i);
@@ -89,6 +89,7 @@ void draw()
       go.update();
       
     }
+ 
   }
   
  

@@ -26,6 +26,7 @@ class Location
         Grass(x, y, noise(xwind, ywind));
       }
     }
+    
   }
   
   
