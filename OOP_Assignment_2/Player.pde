@@ -24,7 +24,7 @@ class Player extends GameObject
     this.shoot = shoot;
     this.health = 10;
     this.ammo = 10;
-    speed = 4;
+    speed = 8;
   }
   
   void render()
@@ -75,11 +75,22 @@ class Player extends GameObject
     }
     
    if (frameCount % 120 == 0)
-  {
-    Enemy enemy1 = new Enemy(random(0, width), random(0, height), random(1,4), (float)50, pos.x, pos.y);
-    gameObjects.add(enemy1);
-  }
-    
+    {
+      Enemy enemy1 = new Enemy(random(0, width), random(0, height), random(4,10), (float)50, pos.x, pos.y);
+      gameObjects.add(enemy1);
+    }
     elapsed += timeDelta;
+    
+    if(pos.x > height - 200 && pos.y < 200)
+    {
+      if(keyPressed)
+      {
+        if(key == 'e')
+        {
+          ammo += 10;
+        }
+      }
+    }
+    text(ammo, 300,300,4);
   }
 }
