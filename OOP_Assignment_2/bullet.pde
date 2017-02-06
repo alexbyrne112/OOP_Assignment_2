@@ -1,17 +1,15 @@
-class Bullet extends GameObject
+class Bullet extends GameObject // Gets everything from GameObject
 {
   float theta;
-  float size;
   float speed = 200;
   float timeToLive;
   float alive;
   
-  Bullet(float x, float y, float theta, float size, float timeToLive)
+  Bullet(float x, float y, float theta, float timeToLive)
   {
     pos = new PVector(x, y);
     forward = new PVector(0, 1);
     this.theta = theta;
-    this.size = size;
     this.timeToLive = timeToLive;    
     this.alive = 0;
   }
@@ -22,18 +20,15 @@ class Bullet extends GameObject
     translate(pos.x, pos.y);
     rotate(theta);
     stroke(255);
-    fill(0);
-    ellipse(0,0,20, 20);
+    rect(0, 0, 3, 8);
     popMatrix();
   }
   
-  void update() 
+  void update() // Overrides the method in the base class
   {
     forward.x = sin(theta);
     forward.y = - cos(theta);
-    //PVector bp = PVector.add(pos, PVector.mult(forward, 40));
-      //text(theta, width/2, height/2);
-      text(pos.x + "  "+pos.y,width/2, height/2);
+    
     pos.add(PVector.mult(PVector.mult(forward, speed), timeDelta));
     if (pos.x > width)
     {
@@ -51,7 +46,6 @@ class Bullet extends GameObject
     {
       pos.y = height;
     }
-    
     alive += timeDelta;
     if (alive > timeToLive)
     {

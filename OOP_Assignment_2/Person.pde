@@ -48,7 +48,7 @@ class Player extends GameObject
    translate(pos.x, pos.y);
    rotate(theta);
    shape(shape, 0, 0);
-  //ellipse(0,0,50,50);
+   //ellipse(0,0,50,50);
    popMatrix();
   }
   
@@ -79,7 +79,7 @@ class Player extends GameObject
     if (checkKey(shoot) && elapsed > toPass && ammo > 0)
     {
       
-      Bullet b = new Bullet(pos.x, pos.y - 100, theta, 20, 5);
+      Bullet b = new Bullet(pos.x, pos.y - 100, theta, 5);
       gameObjects.add(b);
       elapsed = 0;
       ammo --;
