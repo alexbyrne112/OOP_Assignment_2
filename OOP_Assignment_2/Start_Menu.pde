@@ -20,7 +20,7 @@ class Menu
         rect(b1.x, b1.y, b1.bwidth, b1.bheight);
         fill(200,0,0);
         text("START", 235, height - 225);
-        image(zombie,width / 2 - 200, height - 400, 400, 400);
+        image(zomb,width / 2 - 200, height - 400, 400, 400);
         scare.play();
         if(mousePressed == true)
          {

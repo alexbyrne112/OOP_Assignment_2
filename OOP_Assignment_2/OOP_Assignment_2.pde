@@ -1,14 +1,15 @@
 void setup()
 {
   fullScreen(P3D);
-  //background(0);
   smooth(4);
   startscreen = loadImage("startscreen.jpg");
-  zombie = loadImage("zombie.jpg");
+  zomb = loadImage("zombie.jpg");
   flooring = loadImage("floor.jpg");
   font = loadFont("Morethanhuman-130.vlw");
   Player player0 = new Player((float)width/2, (float)height/2,(float) 0, (float)50, 'w', 's', 'a' ,'d', ' ');
+  Enemy enemy1 = new Enemy();
   gameObjects.add(player0);
+  gameObjects.add(enemy1);
   fill(200,0,0);
   textSize(0);
   textFont(font);
@@ -30,7 +31,7 @@ ArrayList<GameObject> gameObjects = new ArrayList<GameObject>();
 boolean[] keys = new boolean[1000];
 float timeDelta = 1.0f / 60.0f;
 
-PImage zombie;
+PImage zomb;
 PImage startscreen;
 PImage flooring;
 

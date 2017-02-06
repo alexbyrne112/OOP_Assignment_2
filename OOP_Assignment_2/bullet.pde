@@ -1,4 +1,4 @@
- class Bullet extends GameObject // Gets everything from GameObject
+ class Bullet extends GameObject
 {
   float theta;
   float speed = 750;
