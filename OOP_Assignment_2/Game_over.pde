@@ -21,5 +21,18 @@ class endGame
       fill(200,0,0);
       text("RESTART", width/2 - 235, height -120);
     }
-
+     else
+    {
+        strokeWeight(2);
+        stroke(255);
+        fill(0);
+        rect(b2.x, b2.y, b2.bwidth, b2.bheight);
+        fill(255);
+        stroke(255);
+        text("RESTART", width/2 - 235, height -120);
+        noFill();
+        stroke(255);
+       rect(b2.x, b2.y, b2.bwidth, b2.bheight);
+    }
+  }
 }
