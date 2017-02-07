@@ -12,7 +12,7 @@ class Menu
       textFont(font);
       text("ZOMBIE LAND", 100, 250);
       
-      if(mouseX > 200 && mouseX < 600 && mouseY > height - height/3 && mouseY < height - height/3 + 200)
+      if(mouseX > b1.x && mouseX < b1.x + 400 && mouseY > b1.y && mouseY < b1.y + 200)
       {
         strokeWeight(2);
         stroke(200,0,0);
