@@ -25,6 +25,10 @@ void setup()
   b1.y = height - height/3;
   b1.bwidth = 400;
   b1.bheight = 200;
+  b2.x = width/2 - 300;
+  b2.y = height - 250;
+  b2.bwidth = 600;
+  b2.bheight = 200;
 
 }
 
@@ -44,6 +48,7 @@ PFont font;
 int backdrop = 0;
 
 Button b1 = new Button();
+Button b2 = new Button();
 Menu menu = new Menu();
 Location l = new Location();
 Perks p = new Perks();
