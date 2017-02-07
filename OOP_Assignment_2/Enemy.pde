@@ -31,5 +31,19 @@ class Enemy extends GameObject
     forward = new PVector(sin(theta), -cos(theta));    
     forward.normalize();
     pos.add(PVector.mult(forward, speed));
+    
+    for(int i = 0 ; i < gameObjects.size() ; i ++)
+    {
+      GameObject go = gameObjects.get(i);
+      if (go instanceof Bullet)
+      {
+        Bullet b = (Bullet) go;
+        if (dist(go.pos.x, go.pos.y, this.pos.x, this.pos.y) < 50)
+        {
+          gameObjects.remove(this);
+          gameObjects.remove(b);
+        }
+      }
+    }
   }
 }

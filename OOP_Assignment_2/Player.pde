@@ -87,18 +87,19 @@ class Player extends GameObject
       {
         if(key == 'e')
         {
-          health += 20;
+          health = 20;
         }
       }
     }
     text(ammo, 300, 300);
+    text(health, 600,600);
     if(pos.x < 200 && pos.y < 200)
     {
       if(keyPressed)
       {
         if(key == 'e')
         {
-          ammo += 10;
+          ammo = 50;
         }
       }
     }

@@ -1,7 +1,7 @@
  class Bullet extends GameObject
 {
   float theta;
-  float speed = 750;
+  float speed = 5000;
   float timeToLive;
   float alive;
   
@@ -13,7 +13,7 @@
     this.timeToLive = timeToLive;    
     this.alive = 0;
   }
-  
+
   void render()
   {
     pushMatrix();
