@@ -24,7 +24,7 @@ class Menu
         scare.play();
         if(mousePressed == true)
          {
-           backdrop ++;
+           backdrop = 1;
            scare.pause();
            girl.play();
            ambiance.play();

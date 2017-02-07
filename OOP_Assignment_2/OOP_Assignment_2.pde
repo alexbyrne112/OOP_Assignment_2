@@ -45,6 +45,7 @@ Button b1 = new Button();
 Menu menu = new Menu();
 Location l = new Location();
 Perks p = new Perks();
+endGame over = new endGame();
 
 
 //http://soundbible.com/
@@ -92,6 +93,10 @@ void draw()
       
     }
  
+  }
+  else if(backdrop == 2)
+  {
+    over.display();
   }
   
  

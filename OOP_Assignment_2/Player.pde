@@ -74,7 +74,7 @@ class Player extends GameObject
       ammo --;
     }
     
-   if (frameCount % 120 == 0)
+   if (frameCount % 40 == 0)
     {
       Enemy enemy1 = new Enemy(random(0, width), random(0, height), random(4,10), (float)50);
       gameObjects.add(enemy1);
@@ -112,6 +112,7 @@ class Player extends GameObject
         }
       }
     }
+    
     text(ammo, 300, 300);
     text(health, 600,600);
     if(pos.x < 200 && pos.y < 200)
@@ -123,6 +124,10 @@ class Player extends GameObject
           ammo = 100;
         }
       }
+    }
+    if(health == 0)
+    {
+      backdrop = 2;
     }
   }
 }
