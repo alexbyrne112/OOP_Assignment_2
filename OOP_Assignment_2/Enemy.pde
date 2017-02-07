@@ -1,13 +1,12 @@
 class Enemy extends GameObject
 {
   float speed;
-  PVector playerPos;
+  //PVector playerPos;
   float theta = 0;
   
-  Enemy(float x, float y, float speed, float size, float x1, float y1)
+  Enemy(float x, float y, float speed, float size /*float x1, float y1*/)
   {
     pos = new PVector(x, y);
-    playerPos = new PVector(x1, y1);
     this.speed = speed;
     this.size = size;
     
@@ -47,7 +46,9 @@ class Enemy extends GameObject
       }
       if(go instanceof Player)
       {
-
+        Player p = (Player)go;
+        theta = atan2(p.pos.y - pos.y, p.pos.x - pos.x) + HALF_PI;
+        
       }
     }
     

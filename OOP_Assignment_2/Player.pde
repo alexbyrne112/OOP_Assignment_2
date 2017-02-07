@@ -76,7 +76,7 @@ class Player extends GameObject
     
    if (frameCount % 120 == 0)
     {
-      Enemy enemy1 = new Enemy(random(0, width), random(0, height), random(4,10), (float)50, pos.x, pos.y);
+      Enemy enemy1 = new Enemy(random(0, width), random(0, height), random(4,10), (float)50);
       gameObjects.add(enemy1);
     }
     elapsed += timeDelta;
