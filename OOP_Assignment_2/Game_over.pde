@@ -13,6 +13,15 @@ class endGame
     fill(255);
     text("RESTART", width/2 - 235, height -120);
     
+    pushMatrix();
+    translate(0,0,5);
+    textFont(font2);
+    fill(160,0,0);
+    text("Money: " + money, 100, 200);
+    text("Points: " + score, 100, 400);
+    text("Kills: " +score/10, 100, 600);
+    popMatrix();
+    
     if(mouseX > b2.x && mouseX < b2.x + 600 && mouseY > b2.y && mouseY < b2.y + 200)
     {
       strokeWeight(2);

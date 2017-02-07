@@ -41,7 +41,7 @@ class Enemy extends GameObject
           gameObjects.remove(this);
           //gameObjects.remove(b);
           money += 100;
-          score += 10;
+          score += 15;
         }
         
       }
