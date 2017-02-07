@@ -2,6 +2,7 @@ class endGame
 {
   void display()
   {
+    textFont(font);
     image(endpic, 0,0,width, height);
     fill(200,0,0);
     text("GAME    OVER", width/2 - 350, 200);

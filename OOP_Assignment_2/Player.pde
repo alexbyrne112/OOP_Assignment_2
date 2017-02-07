@@ -140,8 +140,8 @@ class Player extends GameObject
     translate(0,0,5);
     textFont(font2);
     fill(255,0,0);
-    text(ammo, 300, 300);
-    text("health:" + health, 50, height - 50);
+    text("Ammo: " + ammo, width - 280, height - 25);
+    text("health: " + health, 25, height - 25);
     popMatrix();
   }
 }
