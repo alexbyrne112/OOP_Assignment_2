@@ -9,6 +9,7 @@ class Location
   
   void display()
   {
+    //background(255);
     background(50, 50, 0);
     xStartWind += 0.01;
     yStartWind += 0.01;
@@ -37,6 +38,7 @@ class Location
     rotate(wind*radians(360));
     strokeWeight(1.5);
     stroke(15,130,5);
+    //stroke(0);
     line(0, 0, 20, 20);
     popMatrix();
   }

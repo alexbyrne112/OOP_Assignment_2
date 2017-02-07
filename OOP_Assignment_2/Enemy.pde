@@ -27,10 +27,10 @@ class Enemy extends GameObject
   
   void update()
   { 
-    theta = atan2(playerPos.y - pos.y, playerPos.x - pos.x) + HALF_PI;
     forward = new PVector(sin(theta), -cos(theta));    
     forward.normalize();
     pos.add(PVector.mult(forward, speed));
+    
     
     for(int i = 0 ; i < gameObjects.size() ; i ++)
     {
@@ -43,7 +43,14 @@ class Enemy extends GameObject
           gameObjects.remove(this);
           gameObjects.remove(b);
         }
+        
+      }
+      if(go instanceof Player)
+      {
+
       }
     }
+    
+    
   }
 }
