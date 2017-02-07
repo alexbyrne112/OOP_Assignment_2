@@ -102,26 +102,26 @@ class Player extends GameObject
     
     
     
-    if(pos.x > width - 200 && pos.y < 200)
+    if(pos.x > width - 200 && pos.y < 200 && money >= 3000)
     {
       if(keyPressed)
       {
         if(key == 'e')
         {
           health = 150;
+          money -= 3000;
         }
       }
     }
     
-   // text(ammo, 300, 300);
-   // text(health, 600,600);
-    if(pos.x < 200 && pos.y < 200)
+    if(pos.x < 200 && pos.y < 200 && money >= 3000)
     {
       if(keyPressed)
       {
         if(key == 'e')
         {
           ammo = 100;
+          money -= 3000;
         }
       }
     }
@@ -142,7 +142,8 @@ class Player extends GameObject
     fill(160,0,0);
     text("Ammo: " + ammo, width - 280, height - 25);
     text("health: " + health, 25, height - 25);
-    text(score + " points", width/2 - 100, 50);
+    text("$" + money, width/3, 50);
+   // text(score + " points", width - width/3, height -25);
     popMatrix();
   }
 }

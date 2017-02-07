@@ -39,8 +39,8 @@ class Enemy extends GameObject
         if (dist(go.pos.x, go.pos.y, this.pos.x, this.pos.y) < 50)
         {
           gameObjects.remove(this);
-          gameObjects.remove(b);
-          score += 100;
+          //gameObjects.remove(b);
+          money += 100;
         }
         
       }
