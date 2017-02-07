@@ -5,6 +5,8 @@ void setup()
   startscreen = loadImage("startscreen.jpg");
   zomb = loadImage("zombie.jpg");
   flooring = loadImage("floor.jpg");
+  juggernog = loadImage("health.jpg");
+ 
   font = loadFont("Morethanhuman-130.vlw");
   Player player0 = new Player((float)width/2, (float)height/2,(float) 0, (float)50, 'w', 's', 'a' ,'d', ' ');
   gameObjects.add(player0);
@@ -32,6 +34,7 @@ float timeDelta = 1.0f / 60.0f;
 PImage zomb;
 PImage startscreen;
 PImage flooring;
+PImage juggernog;
 
 PFont font;
 
