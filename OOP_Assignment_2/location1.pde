@@ -37,8 +37,7 @@ class Location
     translate(x, y);
     rotate(wind*radians(360));
     strokeWeight(1.5);
-    stroke(15,130,5);
-    //stroke(0);
+    stroke(15,100,5);
     line(0, 0, 20, 20);
     popMatrix();
   }
