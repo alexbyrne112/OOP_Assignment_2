@@ -20,6 +20,10 @@ class endGame
       rect(b2.x, b2.y, b2.bwidth, b2.bheight);
       fill(200,0,0);
       text("RESTART", width/2 - 235, height -120);
+      if(mousePressed == true)
+      {
+        backdrop = 0;
+      }
     }
      else
     {
