@@ -1,10 +1,9 @@
 class Enemy extends GameObject
 {
   float speed;
-  //PVector playerPos;
   float theta = 0;
   
-  Enemy(float x, float y, float speed, float size /*float x1, float y1*/)
+  Enemy(float x, float y, float speed, float size)
   {
     pos = new PVector(x, y);
     this.speed = speed;

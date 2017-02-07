@@ -81,6 +81,20 @@ class Player extends GameObject
     }
     elapsed += timeDelta;
     
+    
+    
+    if(pos.y < 25)
+    {
+      pos.y = 25;
+    }
+    else if(pos.y > height -25)
+    {
+      pos.y = height - 25;
+    }
+
+    
+    
+    
     if(pos.x > width - 200 && pos.y < 200)
     {
       if(keyPressed)
