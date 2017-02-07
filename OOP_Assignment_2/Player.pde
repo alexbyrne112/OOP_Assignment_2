@@ -81,7 +81,18 @@ class Player extends GameObject
     }
     elapsed += timeDelta;
     
-    if(pos.x > height - 200 && pos.y < 200)
+    if(pos.x > width - 200 && pos.y < 200)
+    {
+      if(keyPressed)
+      {
+        if(key == 'e')
+        {
+          health += 20;
+        }
+      }
+    }
+    text(ammo, 300, 300);
+    if(pos.x < 200 && pos.y < 200)
     {
       if(keyPressed)
       {
@@ -91,6 +102,5 @@ class Player extends GameObject
         }
       }
     }
-    text(ammo, 300,300,4);
   }
 }
