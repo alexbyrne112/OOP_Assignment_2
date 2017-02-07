@@ -22,9 +22,9 @@ class Player extends GameObject
     this.up = up;
     this.down = down;
     this.shoot = shoot;
-    this.health = 10;
-    this.ammo = 10;
-    speed = 8;
+    this.health = 100;
+    this.ammo = 100;
+    speed = 15;
   }
   
   void render()
@@ -108,7 +108,7 @@ class Player extends GameObject
       {
         if(key == 'e')
         {
-          health = 20;
+          health = 150;
         }
       }
     }
@@ -120,7 +120,7 @@ class Player extends GameObject
       {
         if(key == 'e')
         {
-          ammo = 50;
+          ammo = 100;
         }
       }
     }

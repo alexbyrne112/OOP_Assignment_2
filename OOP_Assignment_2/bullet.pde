@@ -1,7 +1,7 @@
  class Bullet extends GameObject
 {
   float theta;
-  float speed = 5000;
+  float speed = 2500;
   float timeToLive;
   float alive;
   
@@ -22,7 +22,7 @@
     stroke(0);
     strokeWeight(1);
     fill(255,140,0);
-    rect(0, 0, 5, 15);
+    rect(-5, -50, 10, 20);
     popMatrix();
   }
   
