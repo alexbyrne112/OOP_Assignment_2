@@ -91,7 +91,14 @@ class Player extends GameObject
     {
       pos.y = height - 25;
     }
-
+    else if(pos.x < 25)
+    {
+      pos.x = 25;
+    }
+    else if(pos.x > width - 25)
+    {
+      pos.x = width - 25;
+    }
     
     
     
