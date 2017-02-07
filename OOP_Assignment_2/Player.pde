@@ -113,8 +113,8 @@ class Player extends GameObject
       }
     }
     
-    text(ammo, 300, 300);
-    text(health, 600,600);
+   // text(ammo, 300, 300);
+   // text(health, 600,600);
     if(pos.x < 200 && pos.y < 200)
     {
       if(keyPressed)
@@ -136,5 +136,11 @@ class Player extends GameObject
     {
       backdrop = 2;
     }
+    pushMatrix();
+    translate(0,0,5);
+    fill(255,0,0);
+    text(ammo, 300, 300);
+    text("health:" + health, 0, height - 50);
+    popMatrix();
   }
 }
