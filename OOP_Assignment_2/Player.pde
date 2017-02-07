@@ -125,7 +125,14 @@ class Player extends GameObject
         }
       }
     }
-    if(health == 0)
+    if(health < 30)
+    {
+      noFill();
+      strokeWeight(10);
+      stroke(255,0,0);
+      rect(0,0,width,height);
+    }
+    if(health <= 0)
     {
       backdrop = 2;
     }
