@@ -50,6 +50,7 @@ PFont font2;
 int backdrop = 0;
 int money = 0;
 int score = 0;
+int highScore = 0;
 
 Button b1 = new Button();
 Button b2 = new Button();

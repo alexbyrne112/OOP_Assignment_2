@@ -145,5 +145,16 @@ class Player extends GameObject
     text("$" + money,width - width/3 + 250, 50);
     text(score + " points", width/3 -300, 50);
     popMatrix();
+    /*if(backdrop == 2)
+    {
+      if(mouseX > b2.x && mouseX < b2.x + 600 && mouseY > b2.y && mouseY < b2.y + 200)
+      {
+        if(mousePressed == true)
+        {
+          ammo = 100;
+          health = 100;
+        } 
+      }
+    }*/
   }
 }
