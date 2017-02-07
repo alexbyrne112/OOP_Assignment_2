@@ -36,7 +36,7 @@ class endGame
         text("RESTART", width/2 - 235, height -120);
         noFill();
         stroke(255);
-       rect(b2.x, b2.y, b2.bwidth, b2.bheight);
+        rect(b2.x, b2.y, b2.bwidth, b2.bheight);
     }
   }
 }

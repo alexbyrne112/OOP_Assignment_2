@@ -9,7 +9,7 @@ void setup()
   ammoCola = loadImage("ammo.png");
   endpic = loadImage("end.jpg");
   font = loadFont("Morethanhuman-130.vlw");
-  
+  font2 = loadFont("BookAntiqua-Bold-48.vlw");
   Player player0 = new Player((float)width/2, (float)height/2,(float) 0, (float)50, 'w', 's', 'a' ,'d', ' ');
   gameObjects.add(player0);
   fill(200,0,0);
@@ -45,7 +45,7 @@ PImage ammoCola;
 PImage endpic;
 
 PFont font;
-
+PFont font2;
 
 int backdrop = 0;
 
