@@ -128,7 +128,7 @@ class Player extends GameObject
     if(health < 30)
     {
       noFill();
-      strokeWeight(10);
+      strokeWeight(30);
       stroke(255,0,0);
       rect(0,0,width,height);
     }
