@@ -48,7 +48,10 @@ class Enemy extends GameObject
       {
         Player p = (Player)go;
         theta = atan2(p.pos.y - pos.y, p.pos.x - pos.x) + HALF_PI;
-        
+        if(dist(p.pos.x,p.pos.y,pos.x,pos.y) < 50)
+        {
+          p.health--;
+        }
       }
     }
     
