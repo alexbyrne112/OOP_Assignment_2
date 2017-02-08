@@ -4,7 +4,7 @@
   float speed = 2500;
   float timeToLive;
   float alive;
-  
+  //bullet constructor
   Bullet(float x, float y, float theta, float timeToLive)
   {
     pos = new PVector(x, y);
@@ -13,7 +13,7 @@
     this.timeToLive = timeToLive;    
     this.alive = 0;
   }
-
+   // bullet design
   void render()
   {
     pushMatrix();
@@ -28,6 +28,7 @@
   
   void update()
   {
+    //bullet movement
     forward.x = sin(theta);
     forward.y = - cos(theta);
     
@@ -36,6 +37,7 @@
     alive += timeDelta;
     if (alive > timeToLive)
     {
+      //killing enemies
       gameObjects.remove(this);
     }    
   }  

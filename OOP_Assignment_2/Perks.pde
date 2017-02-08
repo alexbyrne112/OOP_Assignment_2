@@ -2,6 +2,7 @@ class Perks
 {
  void display()
  {
+   //juggernog and ammo cola  design
    pushMatrix();
    translate(width - 200, 0, 2);
    

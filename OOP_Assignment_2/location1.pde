@@ -7,8 +7,10 @@ class Location
   float xStartWind = random(1000);
   float yStartWind = random(20);
   
+  //grass display and movement
   void display()
   {
+    //
     background(50, 50, 0);
     xStartWind += 0.01;
     yStartWind += 0.01;
@@ -16,10 +18,12 @@ class Location
     y +=(noise(yStartWind)*0.5)-0.25; 
     xwind = x;
     ywind = y;
+    //movement for grass for y
     for (int y=0; y<=height; y+=7) 
     {
     ywind +=.2;
     xwind= x;
+    //movement for x
     for (int x=0; x<=width; x+=6) 
       {
         xwind+=0.1;
@@ -28,6 +32,7 @@ class Location
     }
   }
   
+  //grass design
  void Grass(float x, float y, float wind)
   {
     pushMatrix();

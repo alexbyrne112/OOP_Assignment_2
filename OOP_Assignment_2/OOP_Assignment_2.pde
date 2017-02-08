@@ -2,21 +2,26 @@ void setup()
 {
   fullScreen(P3D);
   smooth(4);
+  //images loaded from google images
   startscreen = loadImage("startscreen.jpg");
   zomb = loadImage("zombie.jpg");
   flooring = loadImage("floor.jpg");
   juggernog = loadImage("health.jpg");
   ammoCola = loadImage("ammo.png");
   endpic = loadImage("end.jpg");
+  
+  //fonts
   font = loadFont("Morethanhuman-130.vlw");
   font2 = loadFont("BookAntiqua-Bold-48.vlw");
+  
   Player player0 = new Player((float)width/2, (float)height/2,(float) 0, (float)50, 'w', 's', 'a' ,'d', ' ');
   gameObjects.add(player0);
+  
   fill(200,0,0);
   textFont(font);
-  textSize(1);
   text("ZOMBIE LAND", 100, 250);
   
+  //sound
   minim = new Minim(this);
   scare = minim.loadFile("scare.mp3");
   ambiance = minim.loadFile("ambiance.mp3");
@@ -24,16 +29,20 @@ void setup()
   shot = minim.loadFile("shot.mp3");
   death = minim.loadFile("death.mp3");
   
+  //button
+  //start button
   b1.x = 200;
   b1.y = height - height/3;
   b1.bwidth = 400;
   b1.bheight = 200;
   
+  //restart button
   b2.x = width/2 - 300;
   b2.y = height - 250;
   b2.bwidth = 600;
   b2.bheight = 200;
   
+  //exit button
   b3.x = width - 350;
   b3.y = height -250;
   b3.bwidth = 285;

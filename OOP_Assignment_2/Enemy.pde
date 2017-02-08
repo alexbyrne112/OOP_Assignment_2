@@ -11,6 +11,7 @@ class Enemy extends GameObject
     
   }
   
+  //enemy design
   void render()
   {
     pushMatrix();
@@ -31,7 +32,7 @@ class Enemy extends GameObject
     forward.normalize();
     pos.add(PVector.mult(forward, speed));
     
-    
+    //bullet collision
     for(int i = 0 ; i < gameObjects.size() ; i ++)
     {
       GameObject go = gameObjects.get(i);
@@ -47,6 +48,8 @@ class Enemy extends GameObject
         }
         
       }
+      
+      //following 
       if(go instanceof Player)
       {
         Player p = (Player)go;

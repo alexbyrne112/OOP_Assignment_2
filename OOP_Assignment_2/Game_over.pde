@@ -2,6 +2,7 @@ class endGame
 {
   void display()
   {
+    //info display
     textFont(font);
     image(endpic, 0,0,width, height);
     fill(200,0,0);
@@ -20,6 +21,8 @@ class endGame
     text("Money: " + money, 100, 200);
     text("Points: " + score, 100, 400);
     text("Kills: " +score/15, 100, 600);
+    
+    //set high score
     if(score > highScore)
     {
       highScore = score;
@@ -72,8 +75,6 @@ class endGame
       text("Exit", width - 320, height -120);
       if(mousePressed == true)
       {
-        output.flush();
-        output.close();
         exit();
       }
     }

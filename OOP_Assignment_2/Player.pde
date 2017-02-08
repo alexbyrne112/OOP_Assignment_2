@@ -12,6 +12,7 @@ class Player extends GameObject
   float elapsed = toPass;
   float speed;
   
+  //player constructor
   Player(float x, float y, float theta, float size, char up, char down, char left ,char right, char shoot)
   {
     this.theta = theta;
@@ -27,6 +28,7 @@ class Player extends GameObject
     speed = 15;
   }
   
+  //player design
   void render()
   {
    pushMatrix();
@@ -41,6 +43,7 @@ class Player extends GameObject
    popMatrix();
   }
   
+  //key press checks
   void update()
   {
     
@@ -64,7 +67,7 @@ class Player extends GameObject
       pos.x+=speed;
       theta = radians(90);
     }
-    
+    //shooting
     if (checkKey(shoot) && elapsed > toPass && ammo > 0)
     {
       
@@ -75,7 +78,7 @@ class Player extends GameObject
       shot.play();
       shot.rewind();
     }
-    
+    //enemy spawning
    if (frameCount % 40 == 0)
     {
       Enemy enemy1 = new Enemy(random(0, width), random(0, height), random(4,10), (float)50);
@@ -84,7 +87,7 @@ class Player extends GameObject
     elapsed += timeDelta;
     
     
-    
+    //ensure player stays in the boundries of the screen
     if(pos.y < 25)
     {
       pos.y = 25;
@@ -103,7 +106,7 @@ class Player extends GameObject
     }
     
     
-    
+    //buying juggernog
     if(pos.x > width - 200 && pos.y < 200 && money >= 3000)
     {
       if(keyPressed)
@@ -116,6 +119,7 @@ class Player extends GameObject
       }
     }
     
+    //buying ammo
     if(pos.x < 200 && pos.y < 200 && money >= 3000)
     {
       if(keyPressed)
@@ -127,6 +131,8 @@ class Player extends GameObject
         }
       }
     }
+    
+    //red low health warning
     if(health < 30)
     {
       noFill();
@@ -134,6 +140,7 @@ class Player extends GameObject
       stroke(255,0,0);
       rect(0,0,width,height);
     }
+    //dead game over 
     if(health <= 0)
     {
       backdrop = 2;
@@ -142,11 +149,14 @@ class Player extends GameObject
       pos.x = width/2;
       pos.y = height/2;
       
+      //removes all enemies affter death
       for(int i = 2; i < gameObjects.size(); i ++)
       {
         gameObjects.remove(i);
       }
     }
+    
+    //displays all information on end screen
     pushMatrix();
     translate(0,0,5);
     textFont(font2);

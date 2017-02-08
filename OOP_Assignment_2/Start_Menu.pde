@@ -4,12 +4,13 @@ class Menu
   {
       if(backdrop == 0)
     {
+      //start screen design
       image(startscreen,0,0,width,height);
       fill(200,0,0);
-      textSize(0);
       textFont(font);
       text("ZOMBIE LAND", 100, 250);
       
+      //start button
       if(mouseX > b1.x && mouseX < b1.x + 400 && mouseY > b1.y && mouseY < b1.y + 200)
       {
         strokeWeight(2);
