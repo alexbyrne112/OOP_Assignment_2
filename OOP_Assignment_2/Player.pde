@@ -34,7 +34,7 @@ class Player extends GameObject
    rotate(theta);
    stroke(0);
    strokeWeight(1);
-   fill(255,170,0);
+   fill(150,100,10);
    ellipse(0,0,50,50);
    fill(150);
    rect(-5,-35,10,10);
