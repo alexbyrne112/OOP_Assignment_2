@@ -26,10 +26,16 @@ void setup()
   b1.y = height - height/3;
   b1.bwidth = 400;
   b1.bheight = 200;
+  
   b2.x = width/2 - 300;
   b2.y = height - 250;
   b2.bwidth = 600;
   b2.bheight = 200;
+  
+  b3.x = width - 350;
+  b3.y = height -250;
+  b3.bwidth = 285;
+  b3.bheight = 200;
 
 }
 
@@ -54,6 +60,7 @@ int highScore = 0;
 
 Button b1 = new Button();
 Button b2 = new Button();
+Button b3 = new Button();
 Menu menu = new Menu();
 Location l = new Location();
 Perks p = new Perks();

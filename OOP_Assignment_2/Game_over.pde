@@ -27,6 +27,7 @@ class endGame
     text("High Score: " + highScore, width - 370, 200);
     popMatrix();
     
+    // restart button
     if(mouseX > b2.x && mouseX < b2.x + 600 && mouseY > b2.y && mouseY < b2.y + 200)
     {
       strokeWeight(2);
@@ -38,10 +39,10 @@ class endGame
       text("RESTART", width/2 - 235, height -120);
       if(mousePressed == true)
       {
-        backdrop = 0;
-        score = 0;
+        //backdrop = 0;
+        //score = 0;
         money = 0;
-        
+
       }
     }
      else
@@ -54,6 +55,36 @@ class endGame
         stroke(255);
         textFont(font);
         text("RESTART", width/2 - 235, height -120);
+        noFill();
+        stroke(255);
+        rect(b2.x, b2.y, b2.bwidth, b2.bheight);
+    }
+    
+    //exit button
+    if(mouseX > b3.x && mouseX < b3.x + 200 && mouseY > b3.y && mouseY < b3.y + 200)
+    {
+      strokeWeight(2);
+      stroke(200,0,0);
+      fill(50,0,0);
+      rect(b3.x, b3.y, b3.bwidth, b3.bheight);
+      fill(200,0,0);
+      textFont(font);
+      text("Exit", width - 320, height -120);
+      if(mousePressed == true)
+      {
+        exit();
+      }
+    }
+     else
+    {
+        strokeWeight(2);
+        stroke(255);
+        fill(0);
+        rect(b3.x, b3.y, b3.bwidth, b3.bheight);
+        fill(255);
+        stroke(255);
+        textFont(font);
+        text("Exit", width -320, height -120);
         noFill();
         stroke(255);
         rect(b2.x, b2.y, b2.bwidth, b2.bheight);
