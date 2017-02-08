@@ -19,7 +19,7 @@ class Enemy extends GameObject
     strokeWeight(3);
     stroke(160, 0, 0);
     fill(100);
-    rect(25, -50, 15,40,20, 20, 20, 20);
+    rect(23, -50, 15,40,20, 20, 20, 20);
     rect(-35, -50, 15, 40, 20, 20, 20, 20);
     ellipse(0, 0, 50, 50);
     popMatrix();

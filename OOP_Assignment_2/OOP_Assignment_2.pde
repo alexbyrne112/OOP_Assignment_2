@@ -15,12 +15,14 @@ void setup()
   fill(200,0,0);
   textSize(0);
   textFont(font);
+  textSize(1);
   text("ZOMBIE LAND", 100, 250);
   
   minim = new Minim(this);
   scare = minim.loadFile("scare.mp3");
   ambiance = minim.loadFile("ambiance.mp3");
   girl = minim.loadFile("girl.mp3");
+  shot = minim.loadFile("shot.mp3");
   
   b1.x = 200;
   b1.y = height - height/3;
@@ -73,6 +75,7 @@ Minim minim;
 AudioPlayer scare;
 AudioPlayer ambiance;
 AudioPlayer girl;
+AudioPlayer shot;
 
 
 boolean checkKey(int k)

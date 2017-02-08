@@ -41,7 +41,7 @@ class endGame
       {
         //backdrop = 0;
         //score = 0;
-        money = 0;
+        //money = 0;
 
       }
     }

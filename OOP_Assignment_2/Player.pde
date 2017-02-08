@@ -72,6 +72,8 @@ class Player extends GameObject
       gameObjects.add(b);
       elapsed = 0;
       ammo --;
+      shot.play();
+      shot.rewind();
     }
     
    if (frameCount % 40 == 0)
