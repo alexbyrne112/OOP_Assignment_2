@@ -13,7 +13,6 @@ void setup()
   Player player0 = new Player((float)width/2, (float)height/2,(float) 0, (float)50, 'w', 's', 'a' ,'d', ' ');
   gameObjects.add(player0);
   fill(200,0,0);
-  textSize(0);
   textFont(font);
   textSize(1);
   text("ZOMBIE LAND", 100, 250);
@@ -70,7 +69,6 @@ Perks p = new Perks();
 endGame over = new endGame();
 
 
-
 import ddf.minim.*;
 Minim minim;
 AudioPlayer scare;
@@ -78,7 +76,6 @@ AudioPlayer ambiance;
 AudioPlayer girl;
 AudioPlayer shot;
 AudioPlayer death;
-
 
 boolean checkKey(int k)
 {
@@ -122,5 +119,5 @@ void draw()
   {
     over.display();
   }
-
+  
 }

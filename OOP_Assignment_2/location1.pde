@@ -28,7 +28,6 @@ class Location
     }
   }
   
-  
  void Grass(float x, float y, float wind)
   {
     pushMatrix();

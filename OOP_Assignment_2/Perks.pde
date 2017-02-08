@@ -15,6 +15,5 @@ class Perks
    rect(0,0,200,200);
    image(ammoCola, 0, 0, 200,200);
    popMatrix();
-   
  }
 }

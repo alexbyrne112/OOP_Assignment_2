@@ -1,7 +1,5 @@
 class Menu
 {
-   
-  
   void display()
   {
       if(backdrop == 0)

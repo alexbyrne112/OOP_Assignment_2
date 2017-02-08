@@ -39,9 +39,9 @@ class endGame
       text("RESTART", width/2 - 235, height -120);
       if(mousePressed == true)
       {
-        //backdrop = 0;
-        //score = 0;
-        //money = 0;
+        backdrop = 0;
+        score = 0;
+        money = 0;
 
       }
     }
@@ -72,6 +72,8 @@ class endGame
       text("Exit", width - 320, height -120);
       if(mousePressed == true)
       {
+        output.flush();
+        output.close();
         exit();
       }
     }
