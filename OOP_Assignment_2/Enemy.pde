@@ -37,11 +37,11 @@ class Enemy extends GameObject
       GameObject go = gameObjects.get(i);
       if (go instanceof Bullet)
       {
-        Bullet b = (Bullet) go;
         if (dist(go.pos.x, go.pos.y, this.pos.x, this.pos.y) < 50)
         {
           gameObjects.remove(this);
-          //gameObjects.remove(b);
+          death.play();
+          death.rewind();
           money += 100;
           score += 15;
         }
@@ -56,8 +56,6 @@ class Enemy extends GameObject
           p.health--;
         }
       }
-    }
-    
-    
+    } 
   }
 }

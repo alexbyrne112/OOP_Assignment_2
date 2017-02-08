@@ -23,6 +23,7 @@ void setup()
   ambiance = minim.loadFile("ambiance.mp3");
   girl = minim.loadFile("girl.mp3");
   shot = minim.loadFile("shot.mp3");
+  death = minim.loadFile("death.mp3");
   
   b1.x = 200;
   b1.y = height - height/3;
@@ -76,6 +77,7 @@ AudioPlayer scare;
 AudioPlayer ambiance;
 AudioPlayer girl;
 AudioPlayer shot;
+AudioPlayer death;
 
 
 boolean checkKey(int k)

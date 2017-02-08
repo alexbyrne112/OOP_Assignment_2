@@ -9,7 +9,6 @@ class Location
   
   void display()
   {
-    //background(255);
     background(50, 50, 0);
     xStartWind += 0.01;
     yStartWind += 0.01;
@@ -27,7 +26,6 @@ class Location
         Grass(x, y, noise(xwind, ywind));
       }
     }
-    
   }
   
   
